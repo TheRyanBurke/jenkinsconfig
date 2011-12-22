@@ -1,2 +1,5 @@
 war/
 plugins/
+jobs/*/workspace/
+jobs/*/latest/
+jobs/*/builds/
