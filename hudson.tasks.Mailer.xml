@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<hudson.tasks.Mailer_-DescriptorImpl>
+  <helpRedirect/>
+  <hudsonUrl>http://ec2-50-16-158-209.compute-1.amazonaws.com:8090/</hudsonUrl>
+  <smtpAuthUsername>ryan@demandresults.com</smtpAuthUsername>
+  <smtpAuthPassword>qyZAxmPR0F+8Dvk+ZBssBHD2mRxl8bnXYxSFv2JrLYo=</smtpAuthPassword>
+  <adminAddress>ryan@demandresults.com</adminAddress>
+  <smtpHost>smtp.gmail.com</smtpHost>
+  <useSsl>true</useSsl>
+  <charset>UTF-8</charset>
+</hudson.tasks.Mailer_-DescriptorImpl>
