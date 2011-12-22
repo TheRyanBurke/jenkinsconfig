@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<matrix-project>
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <com.gmail.ikeike443.PlayAutoTestJobProperty>
+      <holder>
+        <applicationPath>ui-application</applicationPath>
+      </holder>
+    </com.gmail.ikeike443.PlayAutoTestJobProperty>
+  </properties>
+  <scm class="hudson.plugins.git.GitSCM">
+    <configVersion>2</configVersion>
+    <userRemoteConfigs>
+      <hudson.plugins.git.UserRemoteConfig>
+        <name></name>
+        <refspec></refspec>
+        <url>https://github.com/drshared/RingDNA</url>
+      </hudson.plugins.git.UserRemoteConfig>
+    </userRemoteConfigs>
+    <branches>
+      <hudson.plugins.git.BranchSpec>
+        <name>master</name>
+      </hudson.plugins.git.BranchSpec>
+    </branches>
+    <disableSubmodules>false</disableSubmodules>
+    <recursiveSubmodules>false</recursiveSubmodules>
+    <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+    <authorOrCommitter>false</authorOrCommitter>
+    <clean>false</clean>
+    <wipeOutWorkspace>false</wipeOutWorkspace>
+    <pruneBranches>false</pruneBranches>
+    <remotePoll>false</remotePoll>
+    <buildChooser class="hudson.plugins.git.util.DefaultBuildChooser"/>
+    <gitTool>Default</gitTool>
+    <submoduleCfg class="list"/>
+    <relativeTargetDir></relativeTargetDir>
+    <reference></reference>
+    <excludedRegions></excludedRegions>
+    <excludedUsers></excludedUsers>
+    <gitConfigName></gitConfigName>
+    <gitConfigEmail></gitConfigEmail>
+    <skipTag>false</skipTag>
+    <scmName></scmName>
+  </scm>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers class="vector"/>
+  <concurrentBuild>false</concurrentBuild>
+  <axes/>
+  <builders>
+    <com.gmail.ikeike443.PlayAutoTestBuilder>
+      <play__cmd>deps --sync</play__cmd>
+      <play__cmd2>autotest</play__cmd2>
+      <play__cmd3>run</play__cmd3>
+      <play__cmd4></play__cmd4>
+      <play__cmd5></play__cmd5>
+      <play__cmds class="com.gmail.ikeike443.PlayAutoTestBuilder$1" serialization="custom">
+        <unserializable-parents/>
+        <list>
+          <default>
+            <size>5</size>
+          </default>
+          <int>10</int>
+          <string>deps --sync</string>
+          <string>autotest</string>
+          <string>run</string>
+          <string></string>
+          <string></string>
+        </list>
+        <com.gmail.ikeike443.PlayAutoTestBuilder_-1>
+          <default>
+            <outer-class reference="../../../.."/>
+            <val_-play__cmd>deps --sync</val_-play__cmd>
+            <val_-play__cmd2>autotest</val_-play__cmd2>
+            <val_-play__cmd3>run</val_-play__cmd3>
+            <val_-play__cmd4></val_-play__cmd4>
+            <val_-play__cmd5></val_-play__cmd5>
+          </default>
+        </com.gmail.ikeike443.PlayAutoTestBuilder_-1>
+      </play__cmds>
+      <play__path></play__path>
+    </com.gmail.ikeike443.PlayAutoTestBuilder>
+  </builders>
+  <publishers>
+    <com.gmail.ikeike443.PlayTestResultPublisher/>
+    <hudson.tasks.Mailer>
+      <recipients>ryan@demandresults.com frank@demandresults.com kyle@demandresults.com jason@parkstconsulting.com</recipients>
+      <dontNotifyEveryUnstableBuild>false</dontNotifyEveryUnstableBuild>
+      <sendToIndividuals>false</sendToIndividuals>
+    </hudson.tasks.Mailer>
+  </publishers>
+  <buildWrappers/>
+  <runSequentially>false</runSequentially>
+</matrix-project>
